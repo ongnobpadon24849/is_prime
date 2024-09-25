@@ -7,7 +7,7 @@ def index():
     return "SDPX GROUP 3"
 
 @api_app.route('/is_prime', methods=['GET'])
-def index():
+def is_prime_check():
     return "Please provide a number to check if it is prime"
 
 @api_app.route('/is_prime/<num>', methods=['GET'])
