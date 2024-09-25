@@ -39,7 +39,7 @@ pipeline {
                 stage("Build Docker Image") {
                     steps {
                         script {
-                            dir('flask_api') {
+                            dir('api_code') {
                                 sh "docker build -t flask-app ."
                             }
                         }
