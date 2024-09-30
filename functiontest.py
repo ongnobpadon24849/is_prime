@@ -15,6 +15,7 @@ class FlaskTestCase(unittest.TestCase):
         self.assertEqual(response.status_code, 200)
         self.assertIn('Is_prime', data)
         self.assertEqual(data.get('Is_prime'), True)
+        print(f"Test(/is_prime/17) ==> Response: {data}")
 
     def test_true_when_x_is_13219(self):
         response = self.tester.get('/is_prime/13219')
@@ -22,6 +23,7 @@ class FlaskTestCase(unittest.TestCase):
         self.assertEqual(response.status_code, 200)
         self.assertIn('Is_prime', data)
         self.assertEqual(data.get('Is_prime'), True)
+        print(f"Test(/is_prime/13219) ==> Response: {data}")
 
     def test_false_when_x_is_36(self):
         response = self.tester.get('/is_prime/36')
@@ -29,6 +31,7 @@ class FlaskTestCase(unittest.TestCase):
         self.assertEqual(response.status_code, 200)
         self.assertIn('Is_prime', data)
         self.assertEqual(data.get('Is_prime'), False)
+        print(f"Test(/is_prime/36) ==> Response: {data}")
         
 
 if __name__ == '__main__':
